@@ -23,8 +23,8 @@
 @section('main_container')
     <div class="row">
         <div class="col-md-2" > <!-- XAILT-->
-            <button class="btn btn-block" style="background-color: #a4294a; border-color:#a4294a;color:white" onclick="window.location='{{ url("home") }}'"> {{ trans('messages.home') }}</button>
-            <div class="panel" style="background-color:#3493ce; color: #ffffff; width: 100%;"  >
+          
+            <div class="panel" style="background-color:#3493ce; color: #ffffff; width: 100%; margin-top:60px"  >
                 <div class="panel-heading">
                     <h4 class="panel-title accordion-toggle accordion-toggle-styled " data-toggle="collapse" data-parent="#accordion" href="#sear">
                         <a style="font-weight: bold;"> <i class="fa fa-search"> {{ trans('messages.search') }} </i>
@@ -79,8 +79,8 @@
                     </form>
                 </div>
             </div>
-
-
+            <button class="btn btn-block" style="background-color: #a4294a; border-color:#a4294a;color:white" onclick="window.location='{{ url("home") }}'">Падаан бүртгэх</button>
+            <button class="btn btn-block" style="background-color: #a4294a; border-color:#a4294a;color:white" onclick="window.location='{{ url("home") }}'">Байгууллага бүртгэх</button>
 
         </div>
         <div class="col-md-9" style="background-color: #fff;height: 100%;"> <!-- TABLE-->

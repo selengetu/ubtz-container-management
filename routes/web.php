@@ -14,16 +14,16 @@
 Route::group(['middleware' => 'locale'], function () {
   
     if (Auth::check()){
-    Route::get('/', 'HomeController@welcome');
+    Route::get('/', 'HomeController@container');
 } 
 else {
-    Route::get('/', 'HomeController@index');
+    Route::get('/', 'HomeController@container');
 }
    Auth::routes();
     Route::get('/profile', 'UserController@index')->name('profile');
 Route::post('/changePassword','UserController@postCredentials');
 Route::get('/logout', 'Auth\LoginController@logout');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@container')->name('container');
 Route::match(['get', 'post'],'/chart', 'HomeController@chart')->name('chart');
 Route::match(['get', 'post'],'/detail', 'HomeController@detail')->name('detail');
 Route::match(['get', 'post'],'/container', 'HomeController@container')->name('container');
