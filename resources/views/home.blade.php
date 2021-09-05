@@ -740,26 +740,7 @@
     <!-- /page content -->
 @endsection
 
-<script src="{{ asset('js/jquery.min.js') }}"></script>
- <script src="{{ asset('js/mainjquery.js') }}"></script>
-  <script src="{{ asset('js/jquerylast.js') }}"></script>
-<!-- jQuery -->
 
-<!-- Bootstrap -->
-<script src="{{ asset('js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('js/moment.min.js') }}"></script>
-<script src="{{ asset('js/bootstrapvalidator.js') }}"></script>
-<!-- Custom Theme Scripts -->
-<script src="{{ asset('js/gentelella.min.js') }}"></script>
-<script src="{{ asset('js/datepicker.js') }}"></script>
-<script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('js/dataTables.buttons.min.js') }}"></script>
-<script src="{{ asset('js/jszip.min.js') }}"></script>
-<script src="{{ asset('js/pdfmake.min.js') }}"></script>
-<script src="{{ asset('js/vfs_fonts.js') }}"></script>
-<script src="{{ asset('js/buttons.html5.min.js') }}"></script>
-<script src="{{ asset('js/bootstrap-select.min.js')}}" type="text/javascript"></script>
-<script src="{{ asset('js/select2.js')}}" type="text/javascript"></script>
 
 <script type="text/javascript">
 	$(document).ready(function() {

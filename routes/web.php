@@ -68,3 +68,5 @@ Route::get('/chartfill/{id?}/{id1?}/{id2?}',function($id = 0,$id1 = 0,$id2 = 0){
 });
 
 Route::match(['get', 'post'],'/department', 'DepartmentController@index')->name('department');
+
+Route::post('/adddepartment','DepartmentController@store');

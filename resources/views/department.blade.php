@@ -71,8 +71,17 @@
 
         </div>
         <div class="col-md-10" style="background-color: #fff;height: 100%;"> <!-- TABLE-->
+            <div class="row">
+                <div class="col-md-10">
+                    <h3 class="card-title">Байгууллага бүртгэл </h3>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary add" data-toggle="modal" data-target="#exampleModal" id="addproj">
+                        <i class="fa fa-plus" style="color: rgb(255, 255, 255);"> Байгууллага нэмэх</i>
+                    </button>
+                </div>
+            </div>
       
-              
                     <table id="users" class="table  table-striped table-bordered" >
                         <thead>
                         <tr style="color: #fff;" bgcolor="#3493ce">
@@ -96,17 +105,42 @@
                     </table>
                
             </div>
-
-            <div>
-
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Байгууллага бүртгэл</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <form action="adddepartment" method="post">
+                        {{ csrf_field() }}
+                    <div class="modal-body">
+                    
+                        <div class="form-group">
+                          <label for="recipient-name" class="col-form-label">Байгууллага:</label>
+                          <input type="text" class="form-control" id="dep_name" name="dep_name">
+                        </div>
+                        <div class="form-group">
+                          <label for="message-text" class="col-form-label">УБТЗ эсэх:</label>
+                          <select class="form-control select2" id="is_ubtz" name="is_ubtz">
+                            <option value= "1">Тийм</option>
+                            <option value= "0">Үгүй</option>     
+                        </select>
+                        </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Хайх</button>
+                      <button type="submit" class="btn btn-primary">Хадгалах</button>
+                    </div>
+                </form>
+                  </div>
+                </div>
+              </div>    
+        </div>  
 @endsection
-  <script src="{{ asset('js/jquerychart.js') }}"></script>
-                <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
-                <script src="{{ asset('js/dataTables.buttons.min.js') }}"></script>
-                <script src="{{ asset('js/bootstrapvalidator.js') }}"></script>
-                <script src="{{ asset('js/moment.min.js') }}"></script>
-                <script src="{{ asset('js/datepicker.js') }}"></script>
-                <script src="{{ asset('js/select2.js')}}" type="text/javascript"></script>
 
                
 <script type="text/javascript">
