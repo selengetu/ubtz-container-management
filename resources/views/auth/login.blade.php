@@ -1,7 +1,7 @@
 <div class="body"></div>
         <div class="grad"></div>
         <div class="header">
-            <div><span>БНХАУ БОЛОН ОХУ ЕВРОПЫН </span> <br><span>ОРНУУДААС МОНГОЛД БУУХ БОЛОН </span><br><span>МОНГОЛООР ДАМЖИН ӨНГӨРӨХ</span><br><span> АЧААНЫ БИЧИГ БАРИМТЫН САН</span></div>
+            <div><span>УЛААНБААТАР ТӨМӨР ЗАМ </span><br><span> ХУВЬ НИЙЛVVЛСЭН НИЙГЭМЛЭГИЙН</span><br><span>КОНТЕЙНЕР ХАЙЛТЫН ПРОГРАМ </span></div>
         </div>
         <br>
         <div class="login">
@@ -98,7 +98,7 @@
 
             .login{
                 position: absolute;
-                top: calc(75% - 120px);
+                top: calc(75% - 140px);
                 left: calc(10% - 50px);
                 height: 150px;
                 width: 350px;
