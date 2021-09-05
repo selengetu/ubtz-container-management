@@ -11,66 +11,10 @@
     <div class="row">
         <div class="col-md-2" > <!-- XAILT-->
             <button class="btn btn-block" style="background-color: #a4294a; border-color:#a4294a;color:white" onclick="window.location='{{ url("home") }}'"> {{ trans('messages.home') }}</button>
-            <div class="panel" style="background-color:#3493ce; color: #ffffff; width: 100%;"  >
-                <div class="panel-heading">
-                    <h4 class="panel-title accordion-toggle accordion-toggle-styled " data-toggle="collapse" data-parent="#accordion" href="#sear">
-                        <a style="font-weight: bold;"> <i class="fa fa-search"> {{ trans('messages.search') }} </i>
-                        </a>
-                    </h4>
-                </div>
-                <div class="panel-body">
-                    <form method="post" action="chart">
-                        <div class="form-group row">
-
-
-                            <div class="col-md-12 col-sm-4">
-
-                                <div class="form-group form-md-line-input form-md-floating-label">
-                                    <div class="input-icon">
-                                        <input id="startDate" name="startDate" type="text" class="form-control" value=""
-                                               />
-
-                                        <i class="fa fa-calendar-plus-o" >
-                                        </i>  <label style="font-size:12px;">
-
-                                            {{ trans('messages.begdate') }}
-                                        </label>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 col-sm-4">
-                                <div class="form-group form-md-line-input form-md-floating-label">
-                                    <div class="input-icon">
-                                        <input id="endDate" name="endDate" type="text" class="form-control" value=""
-                                            />
-                                        <i class="fa fa-calendar-plus-o">
-                                        </i>
-                                        <label for="form_control_1" style="font-size:12px;">
-                                            {{ trans('messages.enddate') }}
-                                        </label>
-
-
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="col-md-12 col-sm-4">
-                                <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-                                <button class="btn submit btn-block" style="background-color: #2975a4; border-color:#246690"><i class="fa fa-search"></i> {{ trans('messages.search') }}</button>
-                            </div>
-
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-
-
+            <button class="btn btn-block" style="background-color: #a4294a; border-color:#a4294a;color:white" onclick="window.location='{{ url("home") }}'"> Падаан бүртгэл </button>
+          
         </div>
-        <div class="col-md-10" style="background-color: #fff;height: 100%;"> <!-- TABLE-->
+        <div class="col-md-9" style="background-color: #fff;height: 100%;"> <!-- TABLE-->
             <div class="row">
                 <div class="col-md-10">
                     <h3 class="card-title">Байгууллага бүртгэл </h3>
@@ -141,6 +85,13 @@
               </div>    
         </div>  
 @endsection
+  <script src="{{ asset('js/jquerychart.js') }}"></script>
+                <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
+                <script src="{{ asset('js/dataTables.buttons.min.js') }}"></script>
+                <script src="{{ asset('js/bootstrapvalidator.js') }}"></script>
+                <script src="{{ asset('js/moment.min.js') }}"></script>
+                <script src="{{ asset('js/datepicker.js') }}"></script>
+                <script src="{{ asset('js/select2.js')}}" type="text/javascript"></script>
 
                
 <script type="text/javascript">
