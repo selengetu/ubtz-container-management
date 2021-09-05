@@ -27,6 +27,7 @@ Route::get('/home', 'HomeController@container')->name('container');
 Route::match(['get', 'post'],'/chart', 'HomeController@chart')->name('chart');
 Route::match(['get', 'post'],'/detail', 'HomeController@detail')->name('detail');
 Route::match(['get', 'post'],'/container', 'HomeController@container')->name('container');
+
 Route::get('/hyanalt/{id}', ['as' => 'home.hyanalt', 'uses' => 'HomeController@hyanalt']);
 Route::post('/search', 'HomeController@search')->name('search');
 Route::get('/search', 'HomeController@search')->name('search');
@@ -65,3 +66,5 @@ Route::get('/chartfill/{id?}/{id1?}/{id2?}',function($id = 0,$id1 = 0,$id2 = 0){
                         order by substr(t.FRIEGHTGNG,0,4)");
     return $dt;
 });
+
+Route::match(['get', 'post'],'/department', 'DepartmentController@index')->name('department');
