@@ -258,16 +258,26 @@ class HomeController extends Controller
 
     public function container()
     {
+        //dd('asd');
         $query = "";
-        $pContNumber= Request::input('pContNumber');
-        $pContMark= Request::input('pContMark');
-
+       /* $pContNumber= Request::input('pContNumber');
+        $pContMark= Request::input('pContMark');*/
+        $pContNumber= 'TKRU';
+        $pContMark='4425482';
+        if((Request::input('pContNumber')!=null)) {
+            $pContNumber= Request::input('pContNumber');
+        }
+        if((Request::input('pContMark')!=null)) {
+            $pContMark= Request::input('pContMark');
+        }
+       
         $bindings = [
-            'pContNumber'  =>   $pContNumber,
-            'pContMark'  =>  $pContMark,
+            'pcontnumber'  =>   $pContNumber,
+            'pcontmark'  =>  $pContMark,
             ];
-            $rep = DB::executeProcedureWithCursor('get_tracking', $bindings);
-
+            $rep = DB::executeProcedureWithCursor('EDIWEB.GET_TRACKING', $bindings);
+           
+        //    dd($rep);
         return view('container',['rep'=> $rep, 'pContNumber' => $pContNumber, 'pContMark' => $pContMark]);
     }
 
